@@ -1,40 +1,21 @@
 
-import './App.css';
-import Header from  './Header';
-import  './Header.css';
-import './Productcard.css';
-import Productcard from './Productcard';
+import Header from './Header';
 import Home from './Home';
-import './Home.css';
 import Footer from './Footer';
-import './Footer.css';
-import {BrowserRouter as Router,Route,Routes}from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
-
-
-
-    <div nav="App">
-  <Router> 
-                <Routes>
-                   <Route path="/*" element={
-                    <>
-                      <Header/> 
-                      <Routes>
-                           <Route path='/' element={<Home/>}/>
-                           <Route path='/services' element={<services/>}/>
-                           <Route path='/about' element={<aboutUs/>}/>
-                            <Route path='/login' element={<login/>}/>
-                            <Route path='/signup' element={<signup/>}/>
-                      </Routes>
-                    </>
-                   } />  
-                </Routes>
-            </Router>
-     <div className='home-container'>
-    
-     </div>
-      <Footer/>
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <Router>
+        <Header />
+        <main className="mx-auto max-w-7xl px-6 pb-16 pt-24 md:px-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
     </div>
   );
 }

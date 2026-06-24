@@ -1,68 +1,59 @@
-import React from 'react'
-import image from './/Potifolio.jpg';
-import './Home.css'; 
+﻿import image from './Potifolio.jpg';
+
 function Home() {
   return (
-<div className='learn-more' >
-      <div className="home-header">
-      <div className='home-content'>
-   <h1>Hello , I am JENGO ARNOLD</h1>
-          <h2 className="Engineer-title">
-            Network Engineer
-            <span className="Web-Developer">
-              & WebApp Developer
-            </span>
-          </h2>
+    <section className="mx-auto flex min-h-[calc(100vh-184px)] max-w-7xl flex-col-reverse items-center justify-center gap-12 px-6 py-16 text-slate-900 md:flex-row md:px-8">
+      <div className="w-full max-w-2xl text-center md:text-left">
+        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-blue-600">
+          Hello, I am JENGO ARNOLD
+        </p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          Network Engineer
+          <span className="block text-blue-600">& WebApp Developer</span>
+        </h1>
 
-          <p className="description">
-            Passionate about networking, cybersecurity, and modern web
-            development. I build secure infrastructures and create
-            responsive, user-friendly web applications.
-          </p>
+        <p className="mt-6 text-lg leading-8 text-slate-600">
+          Passionate about networking, cybersecurity, and modern web development. I build secure infrastructures and create responsive,
+          user-friendly web applications.
+        </p>
 
-          <div className="button-group">
-            <button className="Proj">
-              View Projects
-            </button>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start">
+          <button className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/10 transition hover:bg-blue-700">
+            View Projects
+          </button>
+          <button className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">
+            Contact Me
+          </button>
+          <button className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+            Download CV
+          </button>
+        </div>
 
-            <button className="Button">
-              Contact Me
-            </button>
- <button className="Cv">
-              Download CV
-            </button>
-
-
+        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <p className="text-4xl font-bold text-slate-900">15+</p>
+            <p className="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Projects</p>
           </div>
-
-          {/* Stats */}
-          <div className="Numbers">
-            <div>
-              <h2 className="No3">15+</h2>
-              <p className="Cer3">Projects</p>
-            </div>
-
-            <div>
-              <h2 className="No2">3+</h2>
-              <p className="Cer2">Years Learning</p>
-            </div>
-
-            <div>
-              <h2 className="No1">5+</h2>
-              <p className="Cer">Certifications</p>
-            </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <p className="text-4xl font-bold text-slate-900">3+</p>
+            <p className="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Years Learning</p>
+          </div>
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <p className="text-4xl font-bold text-slate-900">5+</p>
+            <p className="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Certifications</p>
           </div>
         </div>
-<img src={image} alt="Profile-image" className='imageG'/>
       </div>
-     </div>
 
-
-
-
-
-  
-  )
+      <div className="flex items-center justify-center">
+        <img
+          src={image}
+          alt="Profile image"
+          className="h-[24rem] w-[24rem] rounded-full border-4 border-slate-900 object-cover shadow-2xl transition duration-500 hover:scale-105"
+        />
+      </div>
+    </section>
+  );
 }
 
 export default Home
