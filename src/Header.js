@@ -31,6 +31,13 @@ function Header() {
                 Services
               </a>
             </li>
+ <li>
+              <a href="./services" className="transition hover:text-slate-900">
+                Gallery
+              </a>
+            </li>
+
+
             <li>
               <a href="./services" className="transition hover:text-slate-900">
                 
