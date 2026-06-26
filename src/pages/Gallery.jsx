@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import SectionHeading from "../components/SectionHeading";
 import GalleryCard from "../components/GalleryCard";
 
@@ -30,7 +31,7 @@ const galleryItems = [
 
 function Gallery() {
   return (
-    <main className="min-h-screen bg-white py-16">
+    <motion.main initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="min-h-screen bg-white py-16">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <SectionHeading
           eyebrow="Gallery"
@@ -39,12 +40,14 @@ function Gallery() {
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {galleryItems.map((item) => (
-            <GalleryCard key={item.title} {...item} />
+          {galleryItems.map((item, index) => (
+            <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.07, duration: 0.4 }}>
+              <GalleryCard {...item} />
+            </motion.div>
           ))}
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }
 

@@ -1,18 +1,13 @@
 import React from "react";
-import { Home } from "lucide-react";
+import { motion } from "framer-motion";
 import { stats } from "../data/siteData";
 import StatCard from "./StatCard";
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
+    <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-7xl mx-auto px-4 py-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          {/* <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow">
-            <Home size={16} />
-            A safe home. A hopeful future.
-          </div> */}
-
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
           <h1 className="text-5xl font-bold mt-6">
             Caring for children with love and dignity.
           </h1>
@@ -37,14 +32,17 @@ export default function Hero() {
               <StatCard key={item.label} {...item} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           src="/images/hero.jpg"
           alt="Children"
           className="rounded-3xl shadow-xl"
         />
       </div>
-    </section>
+    </motion.section>
   );
 }
